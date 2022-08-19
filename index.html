@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher</title>
+
+    <!-- Fonts -->
+
+    <!-- Icons -->
+
+    <!-- Animated -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Bootstrap -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./output.css">
+
+</head>
+<body>
+    <header>
+        <div class="head--container">
+            <div class='image'>
+                <iframe src="https://giphy.com/embed/V4NSR1NG2p0KeJJyr5" height="960" frameBorder="0">
+                </iframe>
+            </div>
+            <div class='words'>
+                <h2 class='text animate__animated animate__flipInY animate__slower animate__infinite'>Transposition - Simple with key</h2>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0 bg-dark text-light">
+                <div class="col-md-6">
+                    <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="https://pages.mtu.edu/~shene/NSF-4/Tutorial/VIG/FIG-Disk.jpg"></div>
+                </div>
+                <div class="col-md-6 text-center text-md-end d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                    <div style="max-width: 350px;">
+                        <h2 class="text-uppercase fw-bold">¿Qué es el cifrado?</h2>
+                        <p class="my-3">El cifrado de datos es una forma de traducir datos de texto sin formato (sin cifrar) a ciphertext (cifrado). Los usuarios pueden acceder a los datos cifrados con una clave de cifrado y a los datos descifrados con una clave de descifrado.</p>
+                        <a class="btn btn-primary btn-lg me-2" role="button" href="#">Leer Mas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-4 container py-4 py-xl-5">
+            <div class="row gy-4 gy-md-0 bg-dark text-light">
+                <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                    <div style="max-width: 350px;">
+                        <h2 class="text-uppercase fw-bold">Cifrado por transposición</h2>
+                        <p class="my-3">Es un tipo de cifrado en el que unidades de texto plano se cambian de posición siguiendo un esquema bien definido; las 'unidades de texto' pueden ser de una sola letra (el caso más común), pares de letras, tríos de letras, mezclas de lo anterior. </p><a class="btn btn-primary btn-lg me-2" role="button" href="#">Leer Mas</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="https://d2vlcm61l7u1fs.cloudfront.net/media%2Fb9f%2Fb9f84a16-3dce-4346-b32e-2ee236dcdb62%2FphpE3sAmW.png"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4 justify-content-center"> 
+            <div class="my-5 container-title d-flex justify-content-center">
+                <h2 class="text-light">Cifremos o desifremos una oracion</h2>
+            </div>           
+            <div class="input-group mb-4">
+                <input type="text" id="key" class="form-control" placeholder="Llave de cifrado" aria-label="Recipient's username"
+                    aria-describedby="basic-addon2">
+            </div>
+
+            
+            <div class="input-group mb-4">
+                <input type="text" id="oration" class="form-control" placeholder="Oración a cifrar" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            </div>
+
+            <div class="container d-flex justify-content-center mb-3 mt-5">
+                <button onclick="getValueInput()" class="btn btn-primary form-group col-6">Cifrar</button>
+            </div>
+
+            <div class="container d-flex justify-content-center mt-3 mb-5">
+                <button onclick="decodeWord()" class="btn btn-primary form-group col-6">Desifrar</button>
+            </div>
+
+            <div class="container encode my-5 d-flex justify-content-center align-items-center">
+                <div class="texten col-6 p-5 bg-light d-flex justify-content-center align-items-center">
+                    <h2 id="encodedText"></h2>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="./src/js/index.js"></script>
+</body>
+</html>
